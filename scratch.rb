@@ -1,9 +1,11 @@
-grades = Hash.new
-grades = {"Nenu"=>90,"Thet"=>100}
+loop do
+	print "Continue? (y/n)"
+	answer = gets.chomp
 
-if grades.has_value?(90)
-	grades["food"] = "true"
-	puts "ok"
-else
-	puts "not ok"
+	if answer == "n"
+		break
+			
+	end	
 end
+
+
