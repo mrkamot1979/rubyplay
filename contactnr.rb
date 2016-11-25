@@ -1,5 +1,5 @@
-contact_list = {"name" => "", "phone_number"=> Array.new}
 
+contact_list = {"name" => "", "phone_number"=> Array.new}
 
 
 def ask(question, kind="string")
