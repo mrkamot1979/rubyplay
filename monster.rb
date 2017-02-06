@@ -1,8 +1,9 @@
 class Monster
-	attr_reader :name, :actions
+	attr_reader :name, :actions, :age
 
-	def initialize(name)
+	def initialize(name, age)
 		@name = name
+		@age = age
 		@actions = {
 			screams: 0,
 			scares: 0,
@@ -44,7 +45,7 @@ class Monster
 	def run(&block)
 	    actions[:runs] += 1
 	    print "#{name} runs! "
-	    yield
+	    yield self if block_given?
   	end
 
 	def hide(&block)
@@ -57,7 +58,7 @@ class Monster
 end
 
 
-monster = Monster.new("Fluffy")
+monster = Monster.new("Fluffy", 23)
 monster.say { puts "Welcome to my home." }
 
 monster.scream do
@@ -70,6 +71,7 @@ end
 
 monster.run do
   puts "Going to get you!"
+  puts monster.age
 end
 
 monster.hide do
