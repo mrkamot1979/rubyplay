@@ -5,7 +5,7 @@ class Contact
 	attr_reader :phone_numbers
 
 	def initialize
-		phone_numbers = []
+		@phone_numbers = []
 	end
 
 
@@ -94,6 +94,7 @@ puts nick.to_s()
 nino = Contact.new
 nino.first_name = "Nino"
 nino.last_name = "Roldan"
+nino.middle_name = "Abantao"
 =begin
 puts nino.to_s
 puts nino.to_s('full_name')
@@ -103,4 +104,5 @@ puts nino.to_s('last_first')
 #now we add a phone number
 
 nino.add_phone_number("home","980093")
-nenu.print_phone_numbers
+puts nino.to_s('full_name')
+nino.print_phone_numbers
