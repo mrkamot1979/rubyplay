@@ -2,7 +2,19 @@ require "./phone_number.rb"
 
 class Contact
 	attr_writer :first_name, :middle_name, :last_name
+	attr_reader :phone_numbers
 
+	def initialize
+		phone_numbers = []
+	end
+
+
+	def add_phone_number(kind, number)
+		phone_number = PhoneNumber.new
+		phone_number.kind = kind
+		phone_number.number = number
+		phone_numbers.push(phone_number.kind, phone_number.number) 
+	end
 
 	def first_name
 		@first_name
@@ -54,6 +66,7 @@ class Contact
 	end
 end
 
+=begin - this is the tes t osee if the base class works.
 jason = Contact.new
 jason.first_name = "Nino"
 jason.last_name = "Roldan"
@@ -66,3 +79,4 @@ nick.first_name = "Nino"
 nick.middle_name = "Abantao"
 nick.last_name = "Roldan"
 puts nick.to_s()
+=end
