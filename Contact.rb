@@ -13,8 +13,18 @@ class Contact
 		phone_number = PhoneNumber.new
 		phone_number.kind = kind
 		phone_number.number = number
-		phone_numbers.push(phone_number.kind, phone_number.number) 
+		phone_numbers.push(phone_number) 
 	end
+
+	def print_phone_numbers
+		puts "Phone Numbers"
+		phone_numbers.each{
+			|phone_number| puts phone_number
+
+		}
+	end
+
+
 
 	def first_name
 		@first_name
@@ -80,3 +90,17 @@ nick.middle_name = "Abantao"
 nick.last_name = "Roldan"
 puts nick.to_s()
 =end
+
+nino = Contact.new
+nino.first_name = "Nino"
+nino.last_name = "Roldan"
+=begin
+puts nino.to_s
+puts nino.to_s('full_name')
+puts nino.to_s('last_first')
+=end
+
+#now we add a phone number
+
+nino.add_phone_number("home","980093")
+nenu.print_phone_numbers
