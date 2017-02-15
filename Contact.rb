@@ -100,8 +100,8 @@ end
 
 nino = Contact.new
 nino.first_name = "Rogelio"
-nino.middle_name = "Abantao"
-nino.last_name = "Roldan Jr."
+nino.middle_name = "Gonzalez"
+nino.last_name = "Roldan "
 
 
 nino.add_phone_number("home", "4551549")
@@ -109,8 +109,8 @@ nino.add_phone_number("office", "980093")
 
 
 #add_address(kind, street_1, street_2, city, state, postal_code)
-nino.add_address("home", "23", "Road 1", "Pag-asa, Quezon City", "NCR", "1105")
-nino.add_address("japan", "2601", "Urban Bio Kawasaki 3, 26-3", "Omiya-cho, Saiwai-ku, Kawasaki-shi", "KANAGAWA", "212-0014")
+nino.add_address("home", "XX", "Road 1", "XXXX, Quezon City", "NCR", "XXXX")
+nino.add_address("japan", "2601", "xxxxxxxx, AA-A", "Omiya-cho, Saiwai-ku, CCCC-Shi", "KANAGAWA", "2xx-00zz")
 
 puts nino.to_s('full_name')
 nino.print_phone_numbers
