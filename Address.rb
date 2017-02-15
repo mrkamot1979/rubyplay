@@ -20,6 +20,7 @@ class Address
   end
 end
 
+=begin
 home = Address.new
 home.kind = "Home"
 home.street_1 = "123 Main St."
@@ -31,3 +32,5 @@ home.postal_code = "12345"
 puts home.to_s('short')
 puts "\n"
 puts home.to_s('long')
+
+=end
