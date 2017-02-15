@@ -1,11 +1,33 @@
-require "./phone_number.rb"
+require "./PhoneNumber.rb"
+require "./Address.rb"
 
 class Contact
 	attr_writer :first_name, :middle_name, :last_name
-	attr_reader :phone_numbers
+	attr_reader :phone_numbers, :addresses
 
 	def initialize
 		@phone_numbers = []
+		@addresses = []
+	end
+
+
+	def add_address(kind, street_1, street_2, city, state, postal_code)
+		address = Address.new
+		address.kind = kind
+		address.street_1 = street_1
+		address.street_2 = street_2
+		address.city = city
+		address.state = state
+		address.postal_code = postal_code
+		addresses.push(address)
+		
+	end
+
+	def print_addresses
+		puts "Addresses"
+		addresses.each {|address| puts address.to_s('short')}
+
+		
 	end
 
 
@@ -76,33 +98,20 @@ class Contact
 	end
 end
 
-=begin - this is the tes t osee if the base class works.
-jason = Contact.new
-jason.first_name = "Nino"
-jason.last_name = "Roldan"
-puts jason.to_s
-puts jason.to_s('full_name')
-puts jason.to_s('last_first')
-
-nick = Contact.new
-nick.first_name = "Nino"
-nick.middle_name = "Abantao"
-nick.last_name = "Roldan"
-puts nick.to_s()
-=end
-
 nino = Contact.new
-nino.first_name = "Nino"
-nino.last_name = "Roldan"
+nino.first_name = "Rogelio"
 nino.middle_name = "Abantao"
-=begin
-puts nino.to_s
-puts nino.to_s('full_name')
-puts nino.to_s('last_first')
-=end
+nino.last_name = "Roldan Jr."
 
-#now we add a phone number
 
-nino.add_phone_number("home","980093")
+nino.add_phone_number("home", "4551549")
+nino.add_phone_number("office", "980093")
+
+
+#add_address(kind, street_1, street_2, city, state, postal_code)
+nino.add_address("home", "23", "Road 1", "Pag-asa, Quezon City", "NCR", "1105")
+nino.add_address("japan", "2601", "Urban Bio Kawasaki 3, 26-3", "Omiya-cho, Saiwai-ku, Kawasaki-shi", "KANAGAWA", "212-0014")
+
 puts nino.to_s('full_name')
 nino.print_phone_numbers
+nino.print_addresses
