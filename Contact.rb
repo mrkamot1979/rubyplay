@@ -67,7 +67,7 @@ class Contact
 	end
 
 	def last_first
-		last_name + " " + first_name
+		last_name + "," + " " + first_name
 	end
 
 
@@ -98,6 +98,7 @@ class Contact
 	end
 end
 
+=begin
 nino = Contact.new
 nino.first_name = "Rogelio"
 nino.middle_name = "Gonzalez"
@@ -115,3 +116,4 @@ nino.add_address("japan", "2601", "xxxxxxxx, AA-A", "Omiya-cho, Saiwai-ku, CCCC-
 puts nino.to_s('full_name')
 nino.print_phone_numbers
 nino.print_addresses
+=end
