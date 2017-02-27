@@ -1,4 +1,4 @@
-require "./PhoneNumber.rb"
+require "./Phonenumber.rb"
 require "./Address.rb"
 
 class Contact
@@ -25,7 +25,9 @@ class Contact
 
 	def print_addresses
 		puts "Addresses"
-		addresses.each {|address| puts address.to_s('short')}
+		addresses.each {
+			|address| puts address.to_s('short')
+		}
 
 		
 	end
@@ -42,7 +44,6 @@ class Contact
 		puts "Phone Numbers"
 		phone_numbers.each{
 			|phone_number| puts phone_number
-
 		}
 	end
 
@@ -67,7 +68,7 @@ class Contact
 	end
 
 	def last_first
-		last_name + "," + " " + first_name
+		last_name + " " + first_name
 	end
 
 
@@ -98,22 +99,3 @@ class Contact
 	end
 end
 
-=begin
-nino = Contact.new
-nino.first_name = "Rogelio"
-nino.middle_name = "Gonzalez"
-nino.last_name = "Roldan "
-
-
-nino.add_phone_number("home", "4551549")
-nino.add_phone_number("office", "980093")
-
-
-#add_address(kind, street_1, street_2, city, state, postal_code)
-nino.add_address("home", "XX", "Road 1", "XXXX, Quezon City", "NCR", "XXXX")
-nino.add_address("japan", "2601", "xxxxxxxx, AA-A", "Omiya-cho, Saiwai-ku, CCCC-Shi", "KANAGAWA", "2xx-00zz")
-
-puts nino.to_s('full_name')
-nino.print_phone_numbers
-nino.print_addresses
-=end
