@@ -64,6 +64,20 @@ class AddressBook
       puts contact.to_s('last_first')
     end
   end
+
+
+def run
+  loop do
+    puts "Address Book"
+    puts "e: Exit"
+    print 'Enter your choice: '
+    input = gets.chomp
+    case input
+    when 'e'
+      break
+    end
+  end
+end
 end
 
 
@@ -78,6 +92,8 @@ nino.last_name = "Roldan Jr."
 nino.add_phone_number("home", "4551549")
 nino.add_phone_number("office", "980093")
 
+
+=begin
 #add_address(kind, street_1, street_2, city, state, postal_code)
 nino.add_address("home", "23", "Road 1", "xxxxxa, Quezon City", "NCR", "xxxx5")
 nino.add_address("japan", "2xx1", "Ux", "rrr, Saiwai-ku, Kawasaki-shi", "KANAGAWA", "2aaaaa")
@@ -101,4 +117,7 @@ address_book.contacts.push(thet)
 #address_book.find_by_name("A")
 #address_book.find_by_phone_number("980093")
 
-address_book.find_by_address("saiwai")
+#address_book.find_by_phone_number('977')
+=end
+
+address_book.run
