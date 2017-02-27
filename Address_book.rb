@@ -79,18 +79,18 @@ nino.add_phone_number("home", "4551549")
 nino.add_phone_number("office", "980093")
 
 #add_address(kind, street_1, street_2, city, state, postal_code)
-nino.add_address("home", "23", "Road 1", "Pag-asa, Quezon City", "NCR", "1105")
-nino.add_address("japan", "2601", "Urban Bio Kawasaki 3, 26-3", "Omiya-cho, Saiwai-ku, Kawasaki-shi", "KANAGAWA", "212-0014")
+nino.add_address("home", "23", "Road 1", "xxxxxa, Quezon City", "NCR", "xxxx5")
+nino.add_address("japan", "2xx1", "Ux", "rrr, Saiwai-ku, Kawasaki-shi", "KANAGAWA", "2aaaaa")
 
 thet = Contact.new
 thet.first_name = "Ma. Catherina"
 thet.middle_name = "Guinto"
 thet.last_name = "Roldan"
 
-thet.add_phone_number("cavite", "0464346977")
-thet.add_phone_number("mobile-japan", "08034263476")
+thet.add_phone_number("cavite", "xxx977")
+thet.add_phone_number("mobile-japan", "xxxx76")
 
-thet.add_address("cavite", "78 L. Castro Street", "Poblacion", "Bacoor", "Cavite", "Philippines")
+thet.add_address("cavite", "xxx", "Poblacion", "Bacoor", "Cavite", "Philippines")
 
 
 address_book.contacts.push(nino)
