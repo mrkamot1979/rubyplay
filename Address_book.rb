@@ -6,8 +6,21 @@ class AddressBook
   
   def initialize
     @contacts = []
+    open()
   end
   
+
+def open
+  
+
+end
+
+
+def save
+
+end
+
+
 
 def run
   loop do
@@ -20,6 +33,7 @@ def run
     input = gets.chomp
     case input
      when 'e'
+      save()
       break
      when 'p'
        print_contact_list
