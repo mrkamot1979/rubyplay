@@ -1,5 +1,7 @@
 
 require "./Contact.rb"
+require "YAML"
+
 
 class AddressBook
   attr_reader :contacts
@@ -11,13 +13,18 @@ class AddressBook
   
 
 def open
-  
+  if File.exists?("contacts.yml")
+    @contacts = YAML.load_file("contacts.yml")
+  end  
 
 end
 
 
 def save
-
+  File.open("contacts.yml", "w") do |file|
+    file.write(contacts.to_yaml)
+  end
+  
 end
 
 
