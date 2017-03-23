@@ -1,0 +1,21 @@
+---
+- !ruby/object:Contact
+  phone_numbers: []
+  addresses:
+  - !ruby/object:Address
+    kind: '23 Road 1 '
+    street_1: Pag-asa,
+    street_2: QuezonCity
+    city: Quezon
+    state: Quezon
+    postal_code: "`1034r12034"
+  - !ruby/object:Address
+    kind: Home
+    street_1: 23 Road 1
+    street_2: Pag-asa
+    city: Quezon City
+    state: Metro Manila
+    postal_code: '1105'
+  first_name: Rogelio
+  middle_name: Abantao
+  last_name: Roldan Jr.
