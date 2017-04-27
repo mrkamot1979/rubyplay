@@ -20,3 +20,18 @@ class Address
   end
 end
 
+
+
+=begin
+home = Address.new()
+
+home.kind = "residential"
+home.street_1 = "23 Road 1"
+home.street_2 = "Brgy. Bagong Pag-asa"
+home.city = "Quezon City"
+home.state = "Metro Manila"
+home.postal_code = "1105"
+
+puts home.to_s('short')
+puts home.to_s('long')
+=end
