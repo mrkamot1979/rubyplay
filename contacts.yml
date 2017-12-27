@@ -19,3 +19,12 @@
   first_name: Rogelio
   middle_name: Abantao
   last_name: Roldan Jr.
+- !ruby/object:Contact
+  phone_numbers:
+  - !ruby/object:PhoneNumber
+    kind: Home
+    number: '23234'
+  addresses: []
+  first_name: Joaquin
+  middle_name: Bordado
+  last_name: Bordado
