@@ -8,3 +8,9 @@ class PhoneNumber
 
 end
 
+=begin
+ebak = PhoneNumber.new()
+ebak.kind = "Home"
+ebak.number = "222"
+puts ebak.to_s
+=end
