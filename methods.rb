@@ -22,5 +22,5 @@ class Name
 
 end
 
-name = Name.new("Mr.", "Jason", "", "Seifer")
+name = Name.new("Mr.", "Nino", "", "Roldan")
 puts name.full_name_with_title
